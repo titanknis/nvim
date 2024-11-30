@@ -6,7 +6,9 @@ return {
 	},
 	config = function()
 		require("toggleterm").setup({
-			open_mapping = [[<SPACE>;]], -- Toggle terminal with Ctrl+\ (can be customized)
+			-- Use <leader>; to toggle the terminal in normal mode
+			-- vim.keymap.set("n", "<SPACE>;", "<cmd>ToggleTerm<CR>", { desc = "Toggle terminal" }),
+			open_mapping = [[<C-;>]], -- Toggle terminal with Ctrl+\ (can be customized)
 			-- direction = "float", -- Floating terminal for easy visibility
 		})
 	end,
