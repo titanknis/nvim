@@ -17,6 +17,7 @@ function RunCode()
 	if cmd then
 		vim.cmd("update") -- Save the file before running
 		require("toggleterm").exec(cmd)
+		vim.cmd("wincmd j") -- Move to terminal window
 	else
 		-- print("Filetype not supported")
 		vim.notify("Filetype not supported for running", vim.log.levels.WARN)
