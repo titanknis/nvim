@@ -16,6 +16,7 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Define your plugin specifications
 local plugins = {
+	require("plugins.alpha"),
 	require("plugins.treesitter"),
 	require("plugins.nvim-tree"),
 	require("plugins.pomo"),

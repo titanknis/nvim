@@ -68,5 +68,9 @@ vim.keymap.set("n", "<leader>ts", ":TimerStop<CR>")
 vim.keymap.set("n", "<leader>th", ":TimerHide<CR>")
 vim.keymap.set("n", "<leader>tw", ":TimerShow<CR>")
 
+-- Custom functions
+
 -- Map Ctrl+enter to run code
-vim.keymap.set("n", "<C-CR>", "<cmd>lua RunCode()<CR>", { noremap = true })
+vim.keymap.set("n", "<C-CR>", "<cmd>lua RunCode()<CR>", opts)
+-- toggle Color Scheme
+vim.keymap.set("n", "<leader>tc", "<cmd>lua toggleColorScheme()<CR>", opts)

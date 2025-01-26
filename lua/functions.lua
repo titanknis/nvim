@@ -23,3 +23,31 @@ function RunCode()
 		vim.notify("Filetype not supported for running", vim.log.levels.WARN)
 	end
 end
+
+function toggleColorScheme()
+	-- Get current colorscheme
+	local current = vim.g.colors_name
+
+	-- Check if required colorschemes are available
+	local has_catppuccin = pcall(require, "catppuccin")
+	local has_tokyonight = pcall(require, "tokyonight")
+
+	if not (has_catppuccin and has_tokyonight) then
+		vim.notify(
+			"Missing required colorschemes. Please install both catppuccin and tokyonight.",
+			vim.log.levels.ERROR
+		)
+		return
+	end
+
+	-- Toggle between schemes
+	if current == "tokyonight-moon" then
+		-- Switch to Catppuccin
+		vim.cmd("colorscheme catppuccin")
+		vim.notify("Switched to Catppuccin theme")
+	else
+		-- Switch to Tokyo Night
+		vim.cmd("colorscheme tokyonight")
+		vim.notify("Switched to Tokyo Night theme")
+	end
+end
