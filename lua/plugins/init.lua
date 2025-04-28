@@ -39,7 +39,7 @@ local plugins = {
 
 	-- Tools
 	require("plugins.tools.nvim-tree"),
-	require("plugins.tools.obsidian"),
+	-- require("plugins.tools.obsidian"),
 	require("plugins.tools.pomo"),
 	require("plugins.tools.telescope"),
 	require("plugins.tools.toggleterm"),
@@ -59,6 +59,7 @@ local plugins = {
 	require("plugins.misc.indent"),
 	require("plugins.misc.todo"),
 	require("plugins.misc.undotree"),
+	require("plugins.misc.colorizer"),
 }
 
 -- Set up lazy.nvim with your plugin specifications

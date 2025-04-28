@@ -7,7 +7,7 @@ function RunCode()
 	local dir = vim.fn.expand("%:p:h") -- Directory of current file
 
 	local commands = {
-		c = string.format('cd "%s" && clang "%s" -o "%s" && "./%s"', dir, file, outfile, outfile),
+		c = string.format('cd "%s" && clang -pthread "%s" -o "%s" && "./%s"', dir, file, outfile, outfile),
 		cpp = string.format('cd "%s" && clang++ "%s" -o "%s" && "./%s"', dir, file, outfile, outfile),
 		rust = string.format('cd "%s" && rustc "%s" -o "%s" && "./%s"', dir, file, outfile, outfile),
 
@@ -32,14 +32,14 @@ end
 -- available colorschemes
 local colorschemes = {
 	-- focus and eye
+	"tokyonight-moon",
+	"tokyonight-night",
 	"gruvbox",
 	"carbonfox",
-	"tokyonight-night",
 
-	"tokyonight-day",
 	"rose-pine",
+	"tokyonight-day",
 
-	-- "tokyonight-moon",
 	-- "catppuccin-mocha",
 }
 

@@ -63,6 +63,7 @@ ls.add_snippets("cpp", {
 			"dbg    - Debugging macros",
 			"allinc - Include bits/stdc++.h and using namespace std;",
 			"fio    - Fast I/O setup",
+			"iof    - I/O file (in usaco.org)",
 			"main   - Main function template",
 			"limits - Display data type ranges",
 			"*/",
@@ -83,6 +84,16 @@ ls.add_snippets("cpp", {
 			"ios::sync_with_stdio(false);",
 			"cin.tie(nullptr);",
 		}),
+	}),
+	-- USACO I/O file
+	s("iof", {
+		t('freopen("'),
+		i(1, "problemname"),
+		t('.in", "r", stdin);'),
+		t({ "", "" }),
+		t('freopen("'),
+		rep(1),
+		t('.out", "w", stdout);'),
 	}),
 
 	-- Main function template

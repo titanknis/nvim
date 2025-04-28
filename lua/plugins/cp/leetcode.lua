@@ -14,10 +14,18 @@ return {
 			storage = { home = "~/Dev/Problem_Solving/leetcode/" },
 			browser = "firefox", -- Browser for opening problems
 
-			injector = { ---@type table<lc.lang, lc.inject>
+			injector = {
 				["cpp"] = {
 					before = { "#include <bits/stdc++.h>", "using namespace std;" },
-					-- after = "int main() {}",
+					after = {
+						"int main() {",
+						"   ios::sync_with_stdio(false);",
+						"   cin.tie(nullptr);",
+						"   Solution sol;",
+						"   //cout << sol.methodName(args);",
+						"   return 0;",
+						"}",
+					},
 				},
 			},
 			-- other options here

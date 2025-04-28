@@ -6,6 +6,10 @@ return {
 	config = function()
 		require("competitest").setup({ -- to customize settings
 			compile_command = {
+				c = {
+					exec = "clang",
+					args = { "-pthread", "$(FNAME)", "-o", "$(FNOEXT)" },
+				},
 				cpp = {
 					exec = "g++",
 					args = {
