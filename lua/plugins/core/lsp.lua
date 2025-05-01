@@ -48,6 +48,11 @@ return {
 						},
 					},
 				},
+				html = {}, -- HTML
+				cssls = {}, -- CSS
+				jsonls = {}, -- JSON
+				ts_ls = {}, -- JS and TS
+				-- eslint = {}, -- ESLint
 			}
 
 			-- Set up LSP servers
