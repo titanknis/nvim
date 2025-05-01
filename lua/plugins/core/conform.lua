@@ -18,6 +18,11 @@ return {
 				nix = { "nixfmt" },
 
 				markdown = { "prettier" },
+				css = { "prettier" },
+				html = { "prettier" },
+				javascript = { "prettier" },
+				json = { "prettier" },
+				jsonc = { "prettier" },
 			},
 		})
 	end,
